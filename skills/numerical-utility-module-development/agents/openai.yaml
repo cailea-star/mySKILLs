@@ -1,0 +1,4 @@
+interface:
+  display_name: "Numerical Utility Module Development"
+  short_description: "Build reusable numerical utility modules"
+  default_prompt: "Use $numerical-utility-module-development to add or extend this reusable numerical utility module with a clear API, focused tests, and downstream validation."

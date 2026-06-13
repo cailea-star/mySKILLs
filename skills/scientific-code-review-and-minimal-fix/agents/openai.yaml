@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Code Review and Minimal Fix"
+  short_description: "Review or minimally fix scientific code"
+  default_prompt: "Use $scientific-code-review-and-minimal-fix to review this scientific code change, identify real behavior risks, and make the smallest safe fix if requested."

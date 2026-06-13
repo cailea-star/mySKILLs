@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reference Code Reproduction"
+  short_description: "Reproduce reference code module by module"
+  default_prompt: "Use $reference-code-reproduction to plan and implement a module-by-module reproduction of this reference scientific code with layered reference tests."

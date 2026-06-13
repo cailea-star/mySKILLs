@@ -1,0 +1,4 @@
+interface:
+  display_name: "Introduction Writing"
+  short_description: "Build reference-grounded introductions"
+  default_prompt: "Use $introduction-writing to build or revise a reference-grounded introduction: confirm the paragraph chain, recommend a 3-4 paper reference pool before write-in, verify short quotes against original/full text, then map citations to keyword-level claims."

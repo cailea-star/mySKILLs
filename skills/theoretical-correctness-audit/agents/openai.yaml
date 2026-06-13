@@ -1,0 +1,4 @@
+interface:
+  display_name: "Theoretical Correctness Audit"
+  short_description: "Audit theory before coding or debugging"
+  default_prompt: "Use $theoretical-correctness-audit to judge whether this scientific computation is theoretically well-posed before we implement or debug it."

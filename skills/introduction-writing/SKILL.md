@@ -1,56 +1,55 @@
 ---
 name: introduction-writing
-description: Build, diagnose, restructure, evidence-map, and draft academic or technical introductions, especially proposal/opening-report introductions, using an authoritative reference pool, section/paragraph progression chains, keyword-relation networks, and verifiable citation evidence. Use when the user asks to write or revise an introduction, 开题报告, research background, literature-status section, paragraph logic, keyword chain, paragraph-by-paragraph reference additions, citation plan, or reference-grounded draft.
+description: Build and revise academic or technical introductions and opening reports with quote-first keyword chains, confirmed core reference pools, verified original quotations, section/paragraph progression, approval-gated write-in, and prose drafting. Use when working on 开题报告, research background, introduction structure, literature evidence, keyword chains, quote-based evidence mapping, paragraph-by-paragraph reference support, or formal prose from verified quotations.
 ---
 
 # Introduction Writing
 
-This skill turns a research topic, existing draft, local literature notes, and authoritative references into a coherent introduction or opening-report structure.
+## 1. Skill 定位
 
-The practical model is:
+Use this skill to build 开题报告 / introduction logic from authoritative references instead of secondary unsupported claims.
+
+Core workflow:
 
 ```text
-Introduction / 开题报告前置部分 =
 core reference pool
-+ section progression chain
-+ paragraph progression chain
-+ paragraph function and keyword-relation network
-+ critical comparison with standard reviews
-+ verifiable citation evidence
-+ approval-gated write-in
+-> local evidence discovery
+-> section progression
+-> paragraph progression
+-> quote-first keyword chains
+-> review
+-> prose
 ```
 
-Core principle:
+Core principles:
 
 ```text
-References constrain the field logic.
-Keywords form paragraphs.
-Keyword relations form paragraph logic.
-Paragraph functions form sections.
-Section progression forms the document.
-Citations verify each claim.
+Core references constrain field logic.
+Original quotations generate claims.
+Chinese keywords organize relations only.
+Keyword relations are built from quotation sets.
+Paragraph functions organize accepted quote-chains.
+Section progression organizes paragraph functions.
 ```
 
-In working scaffolds, use `【关键词链】` for paragraph-level keyword work. It is not a keyword list; it is a concept-relation chain. Each item should state a relation such as background, definition, causal, evidence, limitation, method, validation, transition, or application:
+`【关键词链】` is a concept-relation chain, not a keyword list.
+
+Quote-first definition:
 
 ```text
-Concept A -> Concept B（relation type）：claim sentence + verifiable evidence.
+中文 A -> 中文 B（关系）：original quotation set only.
 ```
 
-## When To Use
+Hard rules:
 
-Use this skill when the user wants to:
+- Keep Chinese content limited to keyword nodes and relation type.
+- Do not write Chinese explanatory claim sentences inside quote-first keyword chains.
+- Let original quotations carry the claim or viewpoint.
+- Support each keyword chain with original quotations from at least two different references in the confirmed core reference pool.
+- Prefer 20-40 words per quotation when source and copyright constraints allow.
+- Use complete argumentative units: each quotation must contain a predicate and independently express the relation.
 
-- Write, revise, or diagnose an introduction.
-- Build or refine a 开题报告 / proposal background.
-- Structure sections such as 选题背景及意义, 国内外发展现状与趋势, 研究内容与预期目标, 研究方法与可行性.
-- Turn literature notes into paragraph logic.
-- Search paragraph-level or keyword-level references.
-- Compare a draft against authoritative review logic.
-- Add verifiable citation evidence to claims.
-- Develop a paragraph one step at a time with user approval.
-
-## Source Policy
+## 2. 证据源规则
 
 For nuclear physics, unless the user changes it, use this default authoritative pool:
 
@@ -58,417 +57,305 @@ For nuclear physics, unless the user changes it, use this default authoritative 
 RMP / PPNP / ARNPS / PR / NRP / PRL / PLB
 ```
 
-Always preserve the user's preferred abbreviations. If an abbreviation is ambiguous, state the assumed meaning or ask briefly.
-
-Use this priority order for evidence discovery:
-
-1. Existing project files and local reference notes.
-2. Local notes for the active field, method, or paragraph keywords, especially Abstract, Contents, Introduction, and project-specific 解读 / 可直接用于开题报告 sections.
-3. Specific key chapters inside local notes if the paragraph is method-heavy or evidence-heavy.
-4. Original papers, local full-text extracts, Zotero full text, or publisher pages cited by the local notes.
-5. External authoritative search when local evidence is missing, too indirect, outdated, contradicted, or when the user asks for a stronger reference pool.
-
-When using external/current information, verify rather than relying on memory.
-
-Citation evidence rule:
-- Treat local `.md` reading notes as discovery aids, not as final original evidence, unless the user explicitly asks to cite notes.
-- For verifiable citation labels, use original evidence clauses or short sentences checked against original article text, trusted local full-text extracts, Zotero full text, or publisher pages.
-- A citation label must verify the claim relation, not merely repeat a topic word. Before accepting a citation, ask what relation it proves: definition, cause, decomposition, limitation, evidence, method, validation, or application.
-- Prefer syntactically complete clauses/sentences that show why the claim is true. Avoid evidence labels that only name the field, observable, method, or paper title.
-- Avoid weak keyword-only labels such as `("Q-value")`, `("Fine structure")`, or `("Shape coexistence in nuclei")`, unless the claim is only naming or defining that term.
-- Keep in-text citation labels concise but meaningful, usually a complete clause or sentence fragment of about 15-25 words; if the user explicitly asks for fuller verification and source/copyright rules allow, 20-40 word evidence sentences can be used, especially in the evidence map.
-- If only a paraphrase is available, mark it as paraphrase instead of formatting it as a direct quote.
-- Use the smallest complete evidence unit that verifies the claim, and do not overquote.
-
-## Mandatory Reference Re-Read
-
-Before any new paragraph-chain proposal, keyword-chain proposal, paragraph rewrite, citation mapping, or document modification:
-
-1. Re-read the relevant local project references for the active paragraph or section.
-2. State briefly which references were consulted and what claims they support.
-3. Do not present claims as authoritative unless they are supported by freshly checked local notes or newly verified sources.
-4. For reference additions, produce the verified mapping required in Gate 8 before write-in.
-
-This applies even if similar references were read earlier in the conversation.
-
-## Approval And Write-In Rule
-
-Before modifying the target document, get explicit user approval for the relevant structure, paragraph reference pool, or evidence map. Keep edits scoped to the approved section or paragraph, preserve useful existing structure, and avoid rewriting unrelated material.
-
-## Main Workflow
-
-### Gate 0: Title And Reference Pool
-
-First establish:
+Confirm a core reference pool for the active section or paragraph before building quote-chains. Group references by role when useful:
 
 ```text
-Title / working title:
-Genre: research paper / thesis / opening report / proposal / review / presentation
-Target document path, if any:
-Authoritative reference pool:
-Local reference-note directory:
+main review
+method review
+experimental or phenomenological evidence
+foundational theory
+recent progress
 ```
 
-If the user already has a draft or opening-report document, read that first. Do not assume the task starts from a blank page.
+Evidence discovery order:
 
-From the title, extract 2-5 core keywords. Use them to search or inspect the reference pool.
+1. Existing project files and target draft.
+2. Local reference notes, especially `原文 / 译文 / 解读` blocks and brief source traceability lines.
+3. Relevant key-section notes for method-heavy or evidence-heavy paragraphs.
+4. Original papers, trusted local full-text extracts, Zotero full text, or publisher pages cited by notes.
+5. External authoritative search only when local/original evidence is missing, too indirect, outdated, contradicted, or explicitly requested.
 
-Recommend an initial set of references, grouped by role:
+Local `.md` notes are discovery aids, not final evidence, unless the user explicitly asks to cite notes. Final quote evidence must be checked against original article text, trusted full-text extraction, Zotero full text, or publisher pages.
+
+Quotation evidence rules:
+
+- Each keyword relation must have original quotations from at least two different references in the confirmed core reference pool.
+- Each quotation must prove a relation: definition, cause, decomposition, limitation, evidence, method, validation, transition, or application.
+- Each quotation must be a complete viewpoint-bearing clause or sentence, not a noun phrase, title fragment, topic label, or isolated term.
+- Reject weak evidence such as `("Q-value")`, `("Fine structure")`, `("important probe")`, or `("Shape coexistence in nuclei")` unless the relation is only naming.
+- Mark paraphrase as paraphrase. Do not format paraphrase as direct quote.
+- Use the smallest complete quotation set that supplies enough original wording for later prose. Do not overquote.
+
+Mandatory re-read before any new chain, review, prose, or write-in:
+
+1. Re-read the active paragraph or section.
+2. Re-read the confirmed core reference pool, using local notes only to locate original evidence.
+3. State briefly which core references were consulted and which keyword relations their original quotations support.
+4. Do not mark a relation `ready` unless it has strong original quotations from at least two different core-pool references.
+
+Evidence status:
 
 ```text
-Main review:
-Method review:
-Experimental or phenomenological evidence:
-Foundational / original theory:
-Recent important progress:
+ready = 2+ strong original quotations from different core-pool references
+needs_core_second_source = only one core-pool reference verified
+supplemented_not_ready = one core-pool reference plus non-core support
+paraphrase_only = no verified original quotation
+weak_quote = quotation incomplete or topic-only
+conflict_check = core references frame the relation differently
 ```
 
-Ask the user to confirm the initial reference set before building the global structure, unless the user explicitly instructs you to proceed with an already accepted local reference set.
+## 3. 七步工作流
 
-### Gate 1: Build Local Reference Notes
+### Gate 1：题目与核心参考文献池
 
-For user-confirmed references, create or use local notes. Standard note structure:
+Establish the working title, genre, target document, research object, and active section/paragraph. Extract 2-5 core keywords from the title and draft. Confirm the active core reference pool before building structure or quote-chains.
+
+Output:
 
 ```text
-## Abstract
-
-### English
-...
-
-### 中文
-...
-
-### 解读
-...
-
-## Contents
-
-| English | 中文 | 解读 |
-| --- | --- | --- |
-| ... | ... | ... |
-
-## Introduction
-
-### Paragraph 1: English
-...
-
-### Paragraph 1: 中文
-...
-
-### Paragraph 1: 解读
-...
+title / genre / target document
+active section or paragraph
+core keywords
+confirmed core reference pool by role
 ```
 
-For long or method-specific references, add key-section notes only when needed:
+### Gate 2：本地文献笔记建立与使用
+
+Inspect local notes, PDFs, full-text extracts, and reference lists for the confirmed core pool. Use the active project's existing note style when it is already clear. When creating or normalizing notes, prefer the minimal three-part structure `原文 / 译文 / 解读`; keep metadata such as source, DOI, arXiv, page, section, or evidence status only as brief traceability lines, not as extra analytical sections.
+
+Build or update local notes only when needed to locate original evidence. In each note, make the evidence status explicit: original full-text extraction, normalized full-text extraction, compressed paraphrase, focused reading note, or interpretation. Local notes remain discovery aids unless the relevant passage is explicitly verified against original article text, trusted full-text extraction, Zotero full text, or a publisher page.
+
+Output:
 
 ```text
-## Key Section: [section title]
-English / paraphrase:
-中文:
-解读:
-可用于开题报告:
+local note paths
+available 原文 / 译文 / 解读 blocks
+original evidence source paths or URLs
+candidate sections for quotation extraction
 ```
 
-Respect copyright. Prefer short quotes, compressed paraphrases, and interpretive summaries unless the source text is user-provided or openly reusable.
+### Gate 3：章节推进链
 
-### Gate 2: Section Progression Chain
+Design section-level progression before paragraph detail. For each section, state function, main conceptual progression, and exit pressure: why the next section is required.
 
-Before paragraph details, design 3-4 major sections or document units.
-
-For opening reports, a common chain is:
+For opening reports, default macro progression:
 
 ```text
 选题背景及意义
-→ 国内外发展现状与趋势
-→ 研究内容与预期目标
-→ 研究方法、技术路线与可行性
+-> 国内外发展现状与趋势
+-> 研究内容与预期目标
+-> 研究方法、技术路线与可行性
 ```
 
-For each section, produce:
+User approval is required before writing section-level structure into the target document.
 
-```text
-Section N: [name]
-【作用】：...
-【章节主线】：A -> B -> C -> D
-出口压力：因此下一节必须说明...
-```
+### Gate 4：章节内段落推进链
 
-Get user approval before moving to paragraph chains.
+For the active section, split paragraph units. For each paragraph, state short title, paragraph function, paragraph progression, and bridge to the next paragraph. Keep background, status, gap, research content, and method workflow separated.
 
-### Gate 3: Section-Level Paragraph Progression
+User approval is required before writing paragraph-level structure into the target document.
 
-Work one section at a time. For the active section, propose paragraph units before writing them.
+### Gate 5：引文先行的段落关键词链
 
-Use this format:
+Work paragraph by paragraph.
 
-```text
-Section N: [name]
+1. Read the target paragraph's current wording.
+2. Extract Chinese keyword relations as `中文 A -> 中文 B（关系）`.
+3. For each relation, search the confirmed core reference pool for original quotations.
+4. Require at least two different core-pool references per relation.
+5. Prefer 20-40 word complete argumentative quotation units.
+6. Reject weak, topic-only, phrase-only, or paraphrase-only evidence.
+7. Compare the draft wording with the authoritative original wording.
+8. Build candidate quote-first keyword chains with evidence status.
+9. Wait for user review before write-in.
 
-Paragraph X：短标题
-【作用】：本段在本节和全文中的功能。
-【段落主线】：关键词/概念 A -> B -> C -> D。
-【桥接句】：本段如何自然引向下一段。
-```
+Do not reduce chain count merely for concision during corpus-expansion passes. Preserve the user's chain granularity and increase original quotation diversity.
 
-After presenting a section skeleton, remind the user:
+### Gate 6：与权威综述逻辑对照
 
-```text
-是否需要我重新阅读核心参考文献池，对这个章节骨架做一次优化和批判？
-```
-
-If the user agrees, re-read the relevant core references and compare the proposed chain with the standard review logic.
-
-### Gate 4: Paragraph Keyword Chain
-
-After the section paragraph chain is accepted, work paragraph by paragraph.
-
-For each paragraph, use the Paragraph scaffold template below.
-
-Keyword rules:
-
-- Keywords should be semantic units, not decorative terms.
-- Each keyword relation should state a real relation: background, definition, causal, evidence, contrast, limitation, transition, method, validation, or application.
-- A paragraph may have network-like internal relations, but it must have one dominant paragraph logic.
-- Avoid turning a paragraph into a literature list.
-- Use the heading `【关键词链】`, not `【内部关键词】`, unless the user explicitly asks for the older wording.
-- Treat the keyword chain as a concept-relation chain. Each bullet should contain `A -> B（relation type）：claim`, so the later prose can be written by following the claim sequence.
-
-Apply the Approval And Write-In Rule before writing the paragraph block into the document.
-
-### Gate 5: Critical Comparison With Standard Reviews
-
-After a section or a paragraph group is drafted as structure, compare it with the logic of authoritative reviews.
+Compare the accepted section, paragraph, or quote-chain against standard review logic.
 
 Check:
 
-```text
-- Is the concept order standard?
-- Are method categories in the accepted field order?
-- Are background, status, gap, research content, and method sections clearly separated?
-- Are any claims too broad for the selected references?
-- Are important terms missing or nonstandard?
-- Are there repeated paragraphs or repeated claims?
-- Does each paragraph create a reason for the next paragraph?
-```
+- concept order standardness
+- missing standard terms or categories
+- overbroad or overstrong relations
+- repeated relations across adjacent paragraphs
+- method/status/background boundary confusion
+- relation conflicts across core references
+- whether each paragraph creates a reason for the next paragraph
 
-For method/status sections, extract the standard progression from review papers. Example pattern:
+For nuclear-physics method/status sections, default comparison pattern:
 
 ```text
-General formalism
-→ empirical/systematic methods
-→ microscopic mechanism
-→ fine structure / diagnostic observables
-→ deformation / coupled-channel or modern trend
+general formalism
+-> empirical/systematic methods
+-> microscopic mechanism
+-> fine structure / diagnostic observables
+-> deformation / coupled-channel or modern trend
 ```
 
-Report suggested changes before editing.
+Report suggested changes and wait for user approval before write-in.
 
-### Gate 6: Document Write-In
+### Gate 7：正文化前审查
 
-When editing an existing document, apply the Approval And Write-In Rule. Do not remove user-added material unless explicitly asked or clearly replaced by an approved version.
+Before drafting formal prose, audit the accepted structure and quote-chains.
 
-For Markdown opening-report drafts, keep the working scaffold visible if the user is still developing structure:
+Require:
 
-```text
-【作用】
-【段落主线】
-【关键词链】
-【桥接句】
-```
+- each keyword chain is `ready`
+- each `ready` chain has 2+ core-pool original quotations
+- quotations are complete viewpoint-bearing units
+- no Chinese secondary claim is treated as evidence
+- no local note paraphrase is treated as original quotation
+- terminology is consistent across paragraphs
+- citations and quote sources are traceable
+- paragraph roles and bridge logic remain distinct
 
-When the user later requests formal prose, convert the scaffold into polished paragraphs.
+If any check fails, return a problem list instead of drafting prose.
 
-### Gate 7: Paragraph-Level Reference Planning
+## 4. 审阅后写入与正文化
 
-After paragraph function and keyword chains are accepted, search references paragraph by paragraph.
+There is no separate write-in Gate. Every Gate may write only after user approval.
 
-Use the user's preferred policy. Default:
+Write-in rules:
 
-```text
-1. Read the accepted paragraph function, paragraph line, and keyword chain.
-2. Use local notes and project files to locate candidate references and cited originals; follow the Citation evidence rule for final citation labels.
-3. Search the external authoritative pool when local/original evidence is missing, too indirect, outdated, contradicted, or insufficiently authoritative.
-4. Recommend a 3-4 paper reference pool before write-in unless the user requests a different density.
-5. Apply the Approval And Write-In Rule.
-```
+- Get explicit user approval before modifying the target document.
+- Write only the current Gate's approved content.
+- Preserve useful existing structure unless the user approves replacement.
+- Never write single-source, weak-quote, paraphrase-only, or unreviewed quote-chains as final chains.
+- For quote-chain write-in, require `ready` status.
 
-Use this output format:
+Draft formal prose only after Gate 7 passes or the user explicitly asks for a direct draft.
 
-```text
-Paragraph N：
-核心命题：
-需要支撑的关键词：
-候选参考文献池（3-4 篇）：
-本地线索：
-需要外部补充的文献类型：
-拟引用位置：
-写入状态：等待用户确认
-```
+Prose rules:
 
-Reference roles:
+- Draft from accepted quotation sets, not from Chinese secondary explanations.
+- Follow accepted section and paragraph progression.
+- Preserve paragraph function.
+- Use quotation-supported relations as sentence logic.
+- Keep transitions visible but not mechanical.
+- Avoid encyclopedia-style background and chronological literature lists unless the paragraph function requires them.
+- Convert verification-style quotation evidence to conventional citation style only when the user asks.
 
-```text
-Main review: supports the paragraph's broad framing.
-Topic support: supports a specific mechanism, observable, or method category.
-Experimental/method evidence: supports data interpretation or computational route.
-Foundational/original theory: supports formalism or historical source.
-```
+## 5. 检查与失败模式
 
-### Gate 8: Keyword-Level Evidence Mapping
+Diagnosis checklist:
 
-For high-stakes or closely argued paragraphs, map evidence to each keyword-chain relation.
+- Does every section and paragraph have a distinct role?
+- Does each paragraph make the next paragraph necessary?
+- Are background, status, gap, research content, and method workflow separated?
+- Does each quote-first keyword chain have 2+ different core-pool original quotations?
+- Does each quotation contain a predicate and independently express the relation?
+- Are local notes used only as discovery aids?
+- Are all quotation sources traceable to original text, trusted full-text extraction, Zotero full text, or publisher pages?
+- Are terminology and symbols consistent, e.g. `Qα/Q_α`, `Tα/T_α`, `Schrödinger/Schrodinger`, `formation amplitude/formation probability`, `耦合道方法/通道耦合`?
+- Are repeated relations merged, redistributed, or justified?
+- Is the final research objective specific and reachable?
 
-After the user accepts the paragraph reference pool, first produce a compact verification map:
-```text
-已核对文献：
-- Reference -> supported keyword/claim -> original/full-text quote source or source type -> evidence clause/sentence -> planned citation position.
-```
+Failure modes:
 
-Use this format:
+- Writing Chinese explanatory claims inside quote-first keyword chains.
+- Using keyword-only quotation labels as evidence.
+- Treating local reading-note paraphrase as original quotation.
+- Accepting one core-pool source as final evidence for a chain.
+- Using one core-pool source plus non-core support as `ready`.
+- Reducing chain count when the user requested corpus expansion.
+- Writing prose before quote-chains pass review.
+- Citing papers because they mention a topic rather than prove the relation.
+- Overquoting beyond the smallest complete argumentative unit.
+- Placing sentence-level citations after punctuation when the user wants citation before punctuation.
 
-```text
-【关键词链】：
-- A -> B（关系类型）：claim sentence[[1("complete evidence clause or short sentence")]](#ref1)。
-- C -> D（关系类型）：claim sentence[[2("complete evidence clause")]](#ref2)[[3("complete evidence clause")]](#ref3)。
-```
+## 6. 模板
 
-Evidence rules:
+Use these templates only when they match the current Gate. Do not reintroduce Chinese explanatory claims into quote-first keyword chains.
 
-- Follow the Citation evidence rule.
-- Map citations to keyword relations, not just to broad topics.
-- Place each citation where it supports the claim.
-- Each mapped quote should make the claim relation verifiable, such as cause, definition, mechanism, limitation, evidence, method, validation, or application.
-- Reject or flag weak evidence that merely repeats a topic word, paper title, observable name, method name, or broad field label without supporting the relation in the claim.
-- Record whether the evidence came from publisher abstract/page, local full-text extraction, Zotero full text, or an original PDF when that distinction matters for verification.
+### 核心参考文献池
 
-### Gate 9: Pre-Prose Audit / 正文化前审查
-
-Before converting a scaffold into formal prose, audit the accepted section or whole draft. Report suggested changes before editing unless the user explicitly asks for direct revision.
-
-Check:
-
-```text
-- Repetition: Are paragraph roles distinct, or do adjacent paragraphs restate the same claim?
-- Citation density: Does each paragraph keep a readable balance, usually 2-4 core references in prose even if the scaffold contains denser verification?
-- Weak citations: Are any citation labels keyword-only, title-only, or only topic-matching rather than relation-supporting?
-- Terminology: Are symbols, translated terms, and method names used consistently across paragraphs?
-- Old fields: Are stale scaffold fields such as 【内部关键词】, unapproved 【一句话】, obsolete paragraph numbers, or removed concepts still present?
-- Section boundaries: Are background, method status, research content, and concrete calculation workflow kept separate?
-- Bridge logic: Does each paragraph create a real need for the next paragraph?
-```
-
-For nuclear-physics introductions, also check common terminology drift such as `Qα/Q_α`, `Tα/T_α`, `Schrödinger/Schrodinger`, `formation amplitude/formation probability`, and `耦合道方法/通道耦合`.
-
-### Required Output Templates
-
-Use these exact templates when the user asks for scaffolded writing, reference lists, or verifiable citations.
-
-Paragraph scaffold:
+##### 本地参考文献说明
 
 ```md
-#### Paragraph N：段落标题
+【核心参考文献池】
+- 主综述：
+- 方法综述：
+- 实验/现象证据：
+- 基础理论：
+- 近期进展：
 
-【作用】：本段在本节和全文中的功能。
-
-【段落主线】：概念 A -> 概念 B -> 概念 C -> 研究问题/下一段入口。
-
-【关键词链】：
-- A -> B（关系类型）：解释句。
-- B -> C（关系类型）：解释句。
-- C -> D（证据/转化/局限/方法关系）：解释句。
-
-【桥接句】：本段如何自然引向下一段。
+【本地线索】
+- 笔记：
+- PDF / full-text：
+- 需要补核验：
 ```
 
-Reference-list entry:
+##### 本地文献笔记
+
+```md
+Abstract & Content & Introduction
+
+【原文】
+...
+
+【译文】
+...
+
+【解读】
+...
+```
+
+### 章节推进链
+
+```md
+Section N：章节名
+
+Paragraph M：段落标题
+
+【作用】：一句话...
+
+Paragraph M+1：段落标题
+
+【作用】：一句话...
+
+...
+```
+
+### 段落推进链
+
+```md
+Paragraph N：短标题
+
+【作用】：一句话...
+
+【段落主线】：关键词 A -> 关键词 B -> 关键词 C -> 下一段入口。
+
+【桥接句】：...
+```
+
+### 引文先行关键词链
+
+```md
+
+Paragraph N：短标题
+
+【作用】：...
+
+【段落主线】：...
+
+【关键词链】：
+- 中文关键词 A -> 中文关键词 B（关系类型）：
+  [[1("complete original quotation, preferably 20-40 words")]](#ref1)
+  [[2("complete original quotation from a different core-pool reference, preferably 20-40 words")]](#ref2)。
+
+- 中文关键词 C -> 中文关键词 D（关系类型）：
+  [[3("complete original quotation, preferably 20-40 words")]](#ref3)
+  [[4("complete original quotation from a different core-pool reference, preferably 20-40 words")]](#ref4)。
+
+【桥接句】：...
+```
+
+### 参考文献条目
 
 ```md
 <a id="ref1"></a>[1] Author A, Author B, and Author C, *Journal Name* **Volume**, page-or-article-number (Year).  
 [Paper Title](https://doi.org/xxxxx).
 ```
-
-For newly added references, verify and include a DOI link whenever one is available. If no DOI can be found, use the most authoritative stable publisher, arXiv, or journal URL and note that DOI was not found during verification if relevant.
-
-Verifiable citation and placement:
-
-```md
-[[1("complete evidence clause or short sentence")]](#ref1)
-重核尤其是超重核能否具有可观测寿命，取决于壳效应和形变壳隙能否提供足够的额外稳定性[[1("provide added stability and allow nuclei around these regions to have observable half-lives")]](#ref1)。
-α 衰变链是研究未知超重核区域的重要观测入口[[1("identified through α-decay chain analysis")]](#ref1)。
-```
-
-Placement rules:
-
-- For a single-sentence claim, put citations at the sentence end before the period.
-- For multiple citations supporting the same sentence, place them consecutively before the period.
-- For clauses supported by different references, place the citation immediately after the clause it supports.
-- Keep the quoted evidence in the citation exactly long enough to verify the claim relation, not just the topic.
-- Do not use ambiguous keyword-only quotes when a complete supporting clause is available.
-- If the user asks for conventional final-paper citation style, convert this verification format into normal numeric citations later.
-
-## Drafting Formal Prose
-
-Only draft full prose after structure and citation plan are accepted, unless the user explicitly asks for a direct draft.
-
-When drafting:
-
-- Follow the accepted section chain.
-- Follow the accepted paragraph chain.
-- Preserve paragraph function.
-- Use accepted keyword-chain relations as sentence logic.
-- Keep paragraph transitions visible but not mechanical.
-- Use citations where the evidence mapping says they belong.
-- Avoid writing an encyclopedia-style background.
-- Avoid chronological literature lists unless the paragraph function is historical.
-
-## Diagnosis Checklist
-
-Before finalizing or after major revisions, check:
-
-```text
-- Does every section have a distinct role?
-- Does every paragraph have a distinct role?
-- Does each paragraph make the next paragraph necessary?
-- Are background, status, gap, goal, and method separated?
-- Are repeated claims merged or redistributed?
-- Are important keywords introduced before they are used?
-- Are method categories ordered according to standard reviews?
-- Are terms standard for the discipline?
-- Do references support claims rather than merely matching keywords?
-- Do citation labels contain complete evidence clauses/sentences when the claim is argumentative?
-- Are newly added reference-list entries checked for DOI or another stable authoritative URL?
-- Are citations placed before punctuation when they support one sentence?
-- Is the final research objective specific and reachable?
-```
-
-## Compact Operating Formula
-
-When in doubt, use this operating loop:
-
-```text
-Read local references
-→ propose/compare/revise structure
-→ get approval and write scaffold if requested
-→ discover candidate references from notes and originals
-→ verify complete evidence clauses or short sentences
-→ recommend a 3-4 paper paragraph pool
-→ get approval, map evidence, and write citation support
-→ draft final prose only when requested
-```
-
-## Common Failure Modes To Avoid
-
-Avoid:
-
-- Starting from prose before the reference pool and paragraph chain are stable.
-- Treating all keywords as equally important.
-- Mixing research background with method review.
-- Mixing research content with concrete calculation workflow.
-- Citing papers only because they mention the topic.
-- Using keyword-only citation labels for argumentative claims.
-- Citing project `.md` reading-note prose as if it were original article text.
-- Writing any scaffold, citation support, or prose before the required approval.
-- Skipping the standard-review comparison step.
-- Using long quotes in citation labels when a smaller complete evidence clause would verify the claim.
-- Placing sentence-level citations after the period when the user wants citation before punctuation.
-

@@ -159,17 +159,31 @@ User approval is required before writing paragraph-level structure into the targ
 
 Work paragraph by paragraph.
 
-1. Read the target paragraph's current wording.
-2. Extract Chinese keyword relations as `中文 A -> 中文 B（关系）`.
-3. For each relation, search the confirmed core reference pool for original quotations.
-4. Require at least two different core-pool references per relation.
-5. Prefer 20-40 word complete argumentative quotation units.
-6. Reject weak, topic-only, phrase-only, or paraphrase-only evidence.
-7. Compare the draft wording with the authoritative original wording.
-8. Build candidate quote-first keyword chains with evidence status.
-9. Wait for user review before write-in.
+1. Read the target paragraph's current wording and current `【段落主线】`; treat this as the initial mainline, not as final.
+2. Review local notes for the active paragraph and confirmed core reference pool before searching again. If local notes are missing or too thin, tell the user and provide candidate note entries or passages to add.
+3. Extract Chinese keyword relations as `中文 A -> 中文 B（关系）`.
+4. Search the confirmed core reference pool for original quotations, using local notes only as discovery aids.
+5. Critique the initial `【段落主线】` against the common logic-flow found in the original quotations: missing concepts, premature definitions, weak transitions, overstrong relations, repeated relations, or misplaced emphasis.
+6. Propose an optimized `【段落主线】` based on the reference logic-flow before proposing final quote-chains.
+7. For each relation, require at least two different core-pool references per relation.
+8. Prefer 20-40 word complete argumentative quotation units.
+9. Reject weak, topic-only, phrase-only, or paraphrase-only evidence.
+10. Compare the draft wording with the authoritative original wording.
+11. Build candidate quote-first keyword chains with evidence status.
+12. Wait for user review before write-in.
 
 Do not reduce chain count merely for concision during corpus-expansion passes. Preserve the user's chain granularity and increase original quotation diversity.
+
+Default paragraph-review output order:
+
+```text
+本地笔记回顾
+-> 初版段落主线批判
+-> 参考文献常见 logic-flow
+-> 优化版段落主线
+-> 关键词链候选（中文关键词 + 原文引文 only）
+-> 等待用户审阅
+```
 
 ### Gate 6：与权威综述逻辑对照
 

@@ -159,12 +159,12 @@ User approval is required before writing paragraph-level structure into the targ
 
 Work paragraph by paragraph.
 
-1. Read the target paragraph's current wording and current `【段落主线】`; treat this as the initial mainline, not as final.
+1. Read the target paragraph's current wording, current `【段落主线】`, and current `【桥接句】`; treat the mainline and bridge as initial, not final.
 2. Review local notes for the active paragraph and confirmed core reference pool before searching again. If local notes are missing or too thin, tell the user and provide candidate note entries or passages to add.
 3. Extract Chinese keyword relations as `中文 A -> 中文 B（关系）`.
 4. Search the confirmed core reference pool for original quotations, using local notes only as discovery aids.
-5. Critique the initial `【段落主线】` against the common logic-flow found in the original quotations: missing concepts, premature definitions, weak transitions, overstrong relations, repeated relations, or misplaced emphasis.
-6. Propose an optimized `【段落主线】` based on the reference logic-flow before proposing final quote-chains.
+5. Critique the initial `【段落主线】` and `【桥接句】` against the common logic-flow found in the original quotations: missing concepts, premature definitions, weak transitions, overstrong relations, repeated relations, misplaced emphasis, or a bridge that does not create enough pressure for the next paragraph.
+6. Propose an optimized `【段落主线】` and optimized `【桥接句】` based on the reference logic-flow before proposing final quote-chains.
 7. For each relation, require at least two different core-pool references per relation.
 8. Prefer 20-40 word complete argumentative quotation units.
 9. Reject weak, topic-only, phrase-only, or paraphrase-only evidence.
@@ -179,8 +179,10 @@ Default paragraph-review output order:
 ```text
 本地笔记回顾
 -> 初版段落主线批判
+-> 初版桥接句批判
 -> 参考文献常见 logic-flow
 -> 优化版段落主线
+-> 优化版桥接句
 -> 关键词链候选（中文关键词 + 原文引文 only）
 -> 等待用户审阅
 ```

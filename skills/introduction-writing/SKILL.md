@@ -1,4 +1,4 @@
----
+﻿---
 name: introduction-writing
 description: Build and revise academic or technical introductions and opening reports with quote-first keyword chains, confirmed core reference pools, verified original quotations, section/paragraph progression, paragraph-by-paragraph prose drafting, Chinese-corpus style calibration, and approval-gated write-in. Use when working on 开题报告, research background, introduction structure, literature evidence, keyword chains, 正文草稿, paragraph-by-paragraph reference support, or formal prose from verified quotations.
 ---
@@ -199,13 +199,14 @@ Use when the user asks to write `【正文】`, continue `P1/P2/...`, or convert
 1. Re-read the active paragraph's `【作用】`, `【段落主线】`, `【关键词链】`, and `【桥接句】`.
 2. Re-read adjacent paragraphs only for continuity; do not import their claims into the active paragraph.
 3. Use Chinese corpus articles for terminology, sentence rhythm, and discipline style only; do not treat Chinese corpus wording as evidence unless it is in the reference list and cited.
-4. Draft one `【正文】` paragraph from accepted keyword-chain relations.
-5. Make each sentence map to one keyword relation or bridge function.
-6. Add bracket citations like `[4,17]`; do not include original quotations in `【正文】`.
-7. Avoid generic filler transitions such as `在将...之后，需要...` when the next sentence can state the claim directly.
-8. Avoid project-only framing such as `对本课题而言` for field-general claims.
-9. Output `正文草稿` plus `逐句对照` for user review first. Never write into the target document in the same turn unless the user has explicitly approved write-in after seeing the draft.
-10. After approval, update only the active paragraph's `【正文】` field.
+4. Enforce `【专业术语规范】`: choose Chinese/English terms and symbols only from the reference corpus, accepted keyword chains, or verified original evidence; do not invent or normalize terms from memory.
+5. Draft one `【正文】` paragraph from accepted keyword-chain relations.
+6. Make each sentence map to one keyword relation or bridge function.
+7. Add bracket citations like `[4,17]`; do not include original quotations in `【正文】`.
+8. Avoid generic filler transitions such as `在将...之后，需要...` when the next sentence can state the claim directly.
+9. Avoid project-only framing such as `对本课题而言` for field-general claims.
+10. Output `正文草稿` plus `逐句对照` for user review first. Never write into the target document in the same turn unless the user has explicitly approved write-in after seeing the draft.
+11. After approval, update only the active paragraph's `【正文】` field.
 
 ## 4. 各 Gate 审查要点
 
@@ -251,6 +252,8 @@ Use these checks inside each Gate. Do not wait for a final omnibus review.
 
 - `【正文】` 是否逐句对应关键词链或桥接功能
 - 中文语料是否只用于术语和行文风格校准
+- `【专业术语规范】` 是否严格来自参考语料、已接受关键词链或已核验证据
+- 中文术语、英文术语、符号写法是否与参考语料保持一致
 - 是否避免翻译腔、空泛过渡和不必要的“本课题”限定
 - 是否使用 `[1,2]` 形式参考标注且不出现原文引文
 - 是否先给用户审阅草稿，获批后才写入
@@ -371,3 +374,5 @@ Paragraph N：短标题
 【写入状态】：
 等待用户审阅；未获明确“写入/可以写入/同意”前，不修改目标文档。
 ```
+
+

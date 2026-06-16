@@ -1,4 +1,4 @@
----
+﻿---
 name: introduction-writing
 description: Build and revise academic or technical introductions and opening reports with quote-first keyword chains, confirmed core reference pools, verified original quotations, section/paragraph progression, approval-gated write-in, and prose drafting. Use when working on 开题报告, research background, introduction structure, literature evidence, keyword chains, quote-based evidence mapping, paragraph-by-paragraph reference support, or formal prose from verified quotations.
 ---
@@ -104,31 +104,36 @@ weak_quote = quotation incomplete or topic-only
 conflict_check = core references frame the relation differently
 ```
 
-## 3. 七步工作流
+## 3. 五步工作流
 
-### Gate 1：题目与核心参考文献池
+### Gate 1：题目、研究对象、研究方法与核心参考文献池
 
-Establish the working title, genre, target document, research object, and active section/paragraph. Extract 2-5 core keywords from the title and draft. Confirm the active core reference pool before building structure or quote-chains.
+Establish the working title, genre, target document, core research object, core research method, and active section/paragraph. Extract 2-5 core keywords from the title, research object, research method, and draft. Confirm the active core reference pool before building structure or quote-chains, and ensure it supports both the research object and research method.
 
 Output:
 
 ```text
 title / genre / target document
 active section or paragraph
+core research object
+core research method
 core keywords
 confirmed core reference pool by role
 ```
 
 ### Gate 2：本地文献笔记建立与使用
 
-Inspect local notes, PDFs, full-text extracts, and reference lists for the confirmed core pool. Use the active project's existing note style when it is already clear. When creating or normalizing notes, prefer the minimal three-part structure `原文 / 译文 / 解读`; keep metadata such as source, DOI, arXiv, page, section, or evidence status only as brief traceability lines, not as extra analytical sections.
+Create or use `Original/` for original PDFs and full-text files. Name original evidence files as `refX_title.pdf` or `refX_title.txt`. Create or use `Note/` for local reference notes.
+
+Inspect local notes, original PDFs, full-text extracts, and reference lists for the confirmed core pool. Select local reference-note entries based on the Gate 1 title, core research object, and core research method. Use the active project's existing note style when it is already clear. When creating or normalizing notes, prefer the minimal three-part structure `原文 / 译文 / 解读`; keep metadata such as source, DOI, arXiv, page, section, or evidence status only as brief traceability lines, not as extra analytical sections.
 
 Build or update local notes only when needed to locate original evidence. In each note, make the evidence status explicit: original full-text extraction, normalized full-text extraction, compressed paraphrase, focused reading note, or interpretation. Local notes remain discovery aids unless the relevant passage is explicitly verified against original article text, trusted full-text extraction, Zotero full text, or a publisher page.
 
 Output:
 
 ```text
-local note paths
+Original paths for original PDFs / full-text
+Note paths for local reference notes
 available 原文 / 译文 / 解读 blocks
 original evidence source paths or URLs
 candidate sections for quotation extraction
@@ -136,7 +141,7 @@ candidate sections for quotation extraction
 
 ### Gate 3：章节推进链
 
-Design section-level progression before paragraph detail. For each section, state function, main conceptual progression, and exit pressure: why the next section is required.
+Design section-level progression before paragraph detail. For each section, state function, main conceptual progression, and exit pressure: why the next section is required. Also state how the section progression appropriately introduces, defines, and emphasizes the core research object or core research method. For method-centered sections, state how the method is introduced, defined, and given supported advantage.
 
 For opening reports, default macro progression:
 
@@ -187,102 +192,46 @@ Default paragraph-review output order:
 -> 等待用户审阅
 ```
 
-### Gate 6：与权威综述逻辑对照
+## 4. 各 Gate 审查要点
 
-Compare the accepted section, paragraph, or quote-chain against standard review logic.
+Use these checks inside each Gate. Do not wait for a final omnibus review.
 
-Check:
+### Gate 1 审查要点
 
-- concept order standardness
-- missing standard terms or categories
-- overbroad or overstrong relations
-- repeated relations across adjacent paragraphs
-- method/status/background boundary confusion
-- relation conflicts across core references
-- whether each paragraph creates a reason for the next paragraph
+- 核心参考文献池是否足够权威
+- 文献角色是否清楚
+- 核心关键词是否明确
+- 核心【研究对象】是否明确
+- 核心【研究方法】是否明确
 
-For nuclear-physics method/status sections, default comparison pattern:
+### Gate 2 审查要点
 
-```text
-general formalism
--> empirical/systematic methods
--> microscopic mechanism
--> fine structure / diagnostic observables
--> deformation / coupled-channel or modern trend
-```
+- 证据是否可追踪到原文、full-text、Zotero full text 或 publisher page
+- 本地笔记是否只作为证据发现线索
+- 是否误把译文、解读、本地改写当作原文证据
 
-Report suggested changes and wait for user approval before write-in.
+### Gate 3 审查要点
 
-### Gate 7：正文化前审查
+- 章节推进链是否恰当【引出】【定义】【强调】研究对象或研究方法
+- 各章节是否有核心关键词
+- 重要概念是否按章节推进完成：引入 -> 定义 -> 强调
+- 核心方法是否完成：引入 -> 定义 -> 优越性说明
 
-Before drafting formal prose, audit the accepted structure and quote-chains.
+### Gate 4 审查要点
 
-Require:
+- 各段【段落主线】是否服务章节核心词
+- 段落功能是否重复
+- 背景、现状、缺口、方法、研究内容是否混写
+- 桥接句是否制造下一段必要性
 
-- each keyword chain is `ready`
-- each `ready` chain has 2+ core-pool original quotations
-- quotations are complete viewpoint-bearing units
-- no Chinese secondary claim is treated as evidence
-- no local note paraphrase is treated as original quotation
-- terminology is consistent across paragraphs
-- citations and quote sources are traceable
-- paragraph roles and bridge logic remain distinct
+### Gate 5 审查要点
 
-If any check fails, return a problem list instead of drafting prose.
-
-## 4. 审阅后写入与正文化
-
-There is no separate write-in Gate. Every Gate may write only after user approval.
-
-Write-in rules:
-
-- Get explicit user approval before modifying the target document.
-- Write only the current Gate's approved content.
-- Preserve useful existing structure unless the user approves replacement.
-- Never write single-source, weak-quote, paraphrase-only, or unreviewed quote-chains as final chains.
-- For quote-chain write-in, require `ready` status.
-
-Draft formal prose only after Gate 7 passes or the user explicitly asks for a direct draft.
-
-Prose rules:
-
-- Draft from accepted quotation sets, not from Chinese secondary explanations.
-- Follow accepted section and paragraph progression.
-- Preserve paragraph function.
-- Use quotation-supported relations as sentence logic.
-- Keep transitions visible but not mechanical.
-- Avoid encyclopedia-style background and chronological literature lists unless the paragraph function requires them.
-- Convert verification-style quotation evidence to conventional citation style only when the user asks.
-
-## 5. 检查与失败模式
-
-Diagnosis checklist:
-
-- Does every section and paragraph have a distinct role?
-- Does each paragraph make the next paragraph necessary?
-- Are background, status, gap, research content, and method workflow separated?
-- Does each quote-first keyword chain have 2+ different core-pool original quotations?
-- Does each quotation contain a predicate and independently express the relation?
-- Are local notes used only as discovery aids?
-- Are all quotation sources traceable to original text, trusted full-text extraction, Zotero full text, or publisher pages?
-- Are terminology and symbols consistent, e.g. `Qα/Q_α`, `Tα/T_α`, `Schrödinger/Schrodinger`, `formation amplitude/formation probability`, `耦合道方法/通道耦合`?
-- Are repeated relations merged, redistributed, or justified?
-- Is the final research objective specific and reachable?
-
-Failure modes:
-
-- Writing Chinese explanatory claims inside quote-first keyword chains.
-- Using keyword-only quotation labels as evidence.
-- Treating local reading-note paraphrase as original quotation.
-- Accepting one core-pool source as final evidence for a chain.
-- Using one core-pool source plus non-core support as `ready`.
-- Reducing chain count when the user requested corpus expansion.
-- Writing prose before quote-chains pass review.
-- Citing papers because they mention a topic rather than prove the relation.
-- Overquoting beyond the smallest complete argumentative unit.
-- Placing sentence-level citations after punctuation when the user wants citation before punctuation.
-
-## 6. 模板
+- 每条关键词链是否 `ready`
+- 是否有 2+ 核心文献原文证据
+- 引文是否为完整观点单元
+- 引用是否证明关系，而不是只提到主题
+- 重复关系是否合并、移动、收束，或说明保留理由
+## 5. 模板
 
 Use these templates only when they match the current Gate. Do not reintroduce Chinese explanatory claims into quote-first keyword chains.
 

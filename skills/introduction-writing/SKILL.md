@@ -1,6 +1,6 @@
-﻿---
+---
 name: introduction-writing
-description: Build and revise academic or technical introductions and opening reports with quote-first keyword chains, confirmed core reference pools, verified original quotations, section/paragraph progression, approval-gated write-in, and prose drafting. Use when working on 开题报告, research background, introduction structure, literature evidence, keyword chains, quote-based evidence mapping, paragraph-by-paragraph reference support, or formal prose from verified quotations.
+description: Build and revise academic or technical introductions and opening reports with quote-first keyword chains, confirmed core reference pools, verified original quotations, section/paragraph progression, paragraph-by-paragraph prose drafting, Chinese-corpus style calibration, and approval-gated write-in. Use when working on 开题报告, research background, introduction structure, literature evidence, keyword chains, 正文草稿, paragraph-by-paragraph reference support, or formal prose from verified quotations.
 ---
 
 # Introduction Writing
@@ -104,7 +104,7 @@ weak_quote = quotation incomplete or topic-only
 conflict_check = core references frame the relation differently
 ```
 
-## 3. 五步工作流
+## 3. 六步工作流
 
 ### Gate 1：题目、研究对象、研究方法与核心参考文献池
 
@@ -192,6 +192,21 @@ Default paragraph-review output order:
 -> 等待用户审阅
 ```
 
+### Gate 6：正文草拟、审阅与写入
+
+Use when the user asks to write `【正文】`, continue `P1/P2/...`, or convert accepted keyword chains into formal prose.
+
+1. Re-read the active paragraph's `【作用】`, `【段落主线】`, `【关键词链】`, and `【桥接句】`.
+2. Re-read adjacent paragraphs only for continuity; do not import their claims into the active paragraph.
+3. Use Chinese corpus articles for terminology, sentence rhythm, and discipline style only; do not treat Chinese corpus wording as evidence unless it is in the reference list and cited.
+4. Draft one `【正文】` paragraph from accepted keyword-chain relations.
+5. Make each sentence map to one keyword relation or bridge function.
+6. Add bracket citations like `[4,17]`; do not include original quotations in `【正文】`.
+7. Avoid generic filler transitions such as `在将...之后，需要...` when the next sentence can state the claim directly.
+8. Avoid project-only framing such as `对本课题而言` for field-general claims.
+9. Output `正文草稿` plus `逐句对照` for user review first. Never write into the target document in the same turn unless the user has explicitly approved write-in after seeing the draft.
+10. After approval, update only the active paragraph's `【正文】` field.
+
 ## 4. 各 Gate 审查要点
 
 Use these checks inside each Gate. Do not wait for a final omnibus review.
@@ -231,6 +246,15 @@ Use these checks inside each Gate. Do not wait for a final omnibus review.
 - 引文是否为完整观点单元
 - 引用是否证明关系，而不是只提到主题
 - 重复关系是否合并、移动、收束，或说明保留理由
+
+### Gate 6 审查要点
+
+- `【正文】` 是否逐句对应关键词链或桥接功能
+- 中文语料是否只用于术语和行文风格校准
+- 是否避免翻译腔、空泛过渡和不必要的“本课题”限定
+- 是否使用 `[1,2]` 形式参考标注且不出现原文引文
+- 是否先给用户审阅草稿，获批后才写入
+
 ## 5. 模板
 
 Use these templates only when they match the current Gate. Do not reintroduce Chinese explanatory claims into quote-first keyword chains.
@@ -323,4 +347,27 @@ Paragraph N：短标题
 ```md
 <a id="ref1"></a>[1] Author A, Author B, and Author C, *Journal Name* **Volume**, page-or-article-number (Year).  
 [Paper Title](https://doi.org/xxxxx).
+```
+
+### 正文草稿
+
+正文草稿不得包含原文引文；原文引文只保留在 `【关键词链】` 中。
+
+```md
+Paragraph N：短标题
+
+【正文草稿】：
+...
+
+【逐句对照】：
+- S1：关键词关系：[4,17]
+- S2：关键词关系：[4,18]
+- S3：桥接功能：[ref]
+
+【用语校准】：
+- 中文语料借鉴：
+- 避免的表达：
+
+【写入状态】：
+等待用户审阅；未获明确“写入/可以写入/同意”前，不修改目标文档。
 ```

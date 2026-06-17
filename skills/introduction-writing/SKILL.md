@@ -1,4 +1,4 @@
----
+﻿---
 name: introduction-writing
 description: Build and revise academic or technical introductions and opening reports with quote-first keyword chains, confirmed core reference pools, verified original quotations, section/paragraph progression, paragraph-by-paragraph prose drafting, Chinese-corpus style calibration, and approval-gated write-in. Use when working on 开题报告, research background, introduction structure, literature evidence, keyword chains, 正文草稿, paragraph-by-paragraph reference support, or formal prose from verified quotations.
 ---
@@ -45,7 +45,7 @@ Hard rules:
 - Keep Chinese content limited to keyword nodes and relation type.
 - Do not write Chinese explanatory claim sentences inside quote-first keyword chains.
 - Let original quotations carry the claim or viewpoint.
-- Support each keyword chain with original quotations from at least two different references in the confirmed core reference pool.
+- Support each keyword chain with original quotations from at least three different references in the confirmed core reference pool: at least one from Abstract/Introduction and at least two from Conclusion/Discussion/Summary/Outlook/Perspectives when those sections exist.
 - Prefer 20-40 words per quotation when source and copyright constraints allow.
 - Use complete argumentative units: each quotation must contain a predicate and independently express the relation.
 
@@ -79,11 +79,12 @@ Local `.md` notes are discovery aids, not final evidence, unless the user explic
 
 Quotation evidence rules:
 
-- Each keyword relation must have original quotations from at least two different references in the confirmed core reference pool.
+- Each keyword relation must have original quotations from at least three different references in the confirmed core reference pool: at least one from Abstract/Introduction and at least two from Conclusion/Discussion/Summary/Outlook/Perspectives when those sections exist.
 - Each quotation must prove a relation: definition, cause, decomposition, limitation, evidence, method, validation, transition, or application.
 - Each quotation must be a complete viewpoint-bearing clause or sentence, not a noun phrase, title fragment, topic label, or isolated term.
 - Reject weak evidence such as `("Q-value")`, `("Fine structure")`, `("important probe")`, or `("Shape coexistence in nuclei")` unless the relation is only naming.
 - Mark paraphrase as paraphrase. Do not format paraphrase as direct quote.
+- Do not use a sentence as evidence when it is only a secondary citation or a report of another paper's result. If a useful sentence depends on a cited source such as `Refs.`, `as shown in Ref.`, or `see Ref.`, inspect whether it is the author's own synthesis or a pure second-hand claim; for pure second-hand claims, follow the citation one level deeper and use the primary source instead. Mark allowed review-level synthesis as `review_synthesis`.
 - Use the smallest complete quotation set that supplies enough original wording for later prose. Do not overquote.
 
 Mandatory re-read before any new chain, review, prose, or write-in:
@@ -91,17 +92,19 @@ Mandatory re-read before any new chain, review, prose, or write-in:
 1. Re-read the active paragraph or section.
 2. Re-read the confirmed core reference pool, using local notes only to locate original evidence.
 3. State briefly which core references were consulted and which keyword relations their original quotations support.
-4. Do not mark a relation `ready` unless it has strong original quotations from at least two different core-pool references.
+4. Do not mark a relation `ready_strong` unless it has 3+ strong original quotations from different core-pool references, including >=1 Abstract/Introduction source and >=2 Conclusion/Discussion/Summary/Outlook/Perspectives sources, with no pure secondary citation sentence.
 
 Evidence status:
 
 ```text
-ready = 2+ strong original quotations from different core-pool references
+ready_strong = 3+ strong original quotations from different core-pool references, with >=1 Abstract/Introduction source and >=2 Conclusion/Discussion/Summary/Outlook/Perspectives sources, and no pure secondary citation sentence
+ready_min = 2+ strong original quotations from different core-pool references; temporary only, mark the missing evidence slot
 needs_core_second_source = only one core-pool reference verified
 supplemented_not_ready = one core-pool reference plus non-core support
 paraphrase_only = no verified original quotation
 weak_quote = quotation incomplete or topic-only
 conflict_check = core references frame the relation differently
+review_synthesis = allowed review-level synthesis, not pure second-hand claim
 ```
 
 ## 3. 六步工作流
@@ -170,12 +173,13 @@ Work paragraph by paragraph.
 4. Search the confirmed core reference pool for original quotations, using local notes only as discovery aids.
 5. Critique the initial `【段落主线】` and `【桥接句】` against the common logic-flow found in the original quotations: missing concepts, premature definitions, weak transitions, overstrong relations, repeated relations, misplaced emphasis, or a bridge that does not create enough pressure for the next paragraph.
 6. Propose an optimized `【段落主线】` and optimized `【桥接句】` based on the reference logic-flow before proposing final quote-chains.
-7. For each relation, require at least two different core-pool references per relation.
-8. Prefer 20-40 word complete argumentative quotation units.
-9. Reject weak, topic-only, phrase-only, or paraphrase-only evidence.
-10. Compare the draft wording with the authoritative original wording.
-11. Build candidate quote-first keyword chains with evidence status.
-12. Wait for user review before write-in.
+7. For each relation, require at least three different core-pool references per relation: at least one quotation from Abstract/Introduction and at least two from Conclusion/Discussion/Summary/Outlook/Perspectives when available.
+8. Reject pure second-hand citation sentences; if a sentence only repeats another source, trace one level deeper and use the primary source instead. Mark acceptable review synthesis as `review_synthesis`.
+9. Prefer 20-40 word complete argumentative quotation units.
+10. Reject weak, topic-only, phrase-only, or paraphrase-only evidence.
+11. Compare the draft wording with the authoritative original wording.
+12. Build candidate quote-first keyword chains with evidence status.
+13. Wait for user review before write-in.
 
 Do not reduce chain count merely for concision during corpus-expansion passes. Preserve the user's chain granularity and increase original quotation diversity.
 
@@ -200,14 +204,24 @@ Use when the user asks to write `【正文】`, continue `P1/P2/...`, or convert
 2. Re-read adjacent paragraphs only for continuity; do not import their claims into the active paragraph.
 3. Use Chinese corpus articles for terminology, sentence rhythm, and discipline style only; do not treat Chinese corpus wording as evidence unless it is in the reference list and cited.
 3a. Before drafting, check whether the available Chinese corpus supports the active paragraph's key Chinese terminology and style. If central terms are missing, stop and tell the user what corpus should be added instead of drafting from memory.
-4. Enforce `【专业术语规范】`: choose Chinese/English terms and symbols only from the reference corpus, accepted keyword chains, or verified original evidence; do not invent or normalize terms from memory.
-5. Draft one `【正文】` paragraph from accepted keyword-chain relations.
-6. Make each sentence map to one keyword relation or bridge function.
-7. Add bracket citations like `[4,17]`; do not include original quotations in `【正文】`.
-8. Avoid generic filler transitions such as `在将...之后，需要...` when the next sentence can state the claim directly.
-9. Avoid project-only framing such as `对本课题而言` for field-general claims.
-10. Output `语料充分性检查`, `正文草稿`, and `逐句对照` for user review first. Never write into the target document in the same turn unless the user has explicitly approved write-in after seeing the draft.
-11. After approval, update only the active paragraph's `【正文】` field.
+4. Check keyword-chain status before drafting: prefer `ready_strong`; if any relation is only `ready_min`, state the missing evidence slot and do not treat it as final unless the user explicitly accepts that limitation.
+5. Enforce `【专业术语规范】`: choose Chinese/English terms and symbols only from the reference corpus, accepted keyword chains, or verified original evidence; do not invent or normalize terms from memory.
+6. Draft one `【正文】` paragraph from accepted keyword-chain relations.
+7. Make each sentence map to one keyword relation or bridge function.
+8. Add bracket citations like `[4,17]`; do not include original quotations in `【正文】`.
+9. Do not add a citation merely to avoid an unused reference. Any newly used reference must support an accepted keyword-chain relation.
+10. Avoid generic filler transitions such as `在将...之后，需要...` when the next sentence can state the claim directly.
+11. Avoid project-only framing such as `对本课题而言` for field-general claims.
+12. Output `语料充分性检查`, `证据状态检查`, `正文草稿`, and `逐句对照` for user review first. Never write into the target document in the same turn unless the user has explicitly approved write-in after seeing the draft.
+13. After approval, update only the active paragraph's `【正文】` field.
+
+Reference order helper:
+
+```text
+scripts/reorder_refs.py
+```
+
+Use this helper only after the user approves citation renumbering for a Markdown draft. It expands bracket citation groups/ranges, applies first-use numbering through OLD labels, and sorts Markdown reference blocks such as `<a id="ref1"></a>[1]`.
 
 ## 4. 各 Gate 审查要点
 
@@ -247,8 +261,8 @@ Use these checks inside each Gate. Do not wait for a final omnibus review.
 
 ### Gate 5 审查要点
 
-- 每条关键词链是否 `ready`
-- 是否有 2+ 核心文献原文证据
+- 每条关键词链是否 `ready_strong`；`ready_min` 只能临时使用并标明缺口
+- 是否有 3+ 核心文献原文证据：>=1 Abstract/Introduction，>=2 Conclusion/Discussion/Summary/Outlook/Perspectives
 - 引文是否为完整观点单元
 - 引用是否证明关系，而不是只提到主题
 - 重复关系是否合并、移动、收束，或说明保留理由
@@ -258,11 +272,13 @@ Use these checks inside each Gate. Do not wait for a final omnibus review.
 ### Gate 6 审查要点
 
 - `【正文】` 是否逐句对应关键词链或桥接功能
+- 正文使用的关键词链是否达到 `ready_strong`；若为 `ready_min`，是否清楚标出缺口并经用户接受
 - 中文语料是否只用于术语和行文风格校准
 - `【专业术语规范】` 是否严格来自参考语料、已接受关键词链或已核验证据
 - 中文术语、英文术语、符号写法是否与参考语料保持一致
 - 是否避免翻译腔、空泛过渡和不必要的“本课题”限定
 - 是否使用 `[1,2]` 形式参考标注且不出现原文引文
+- 是否避免为了消除空引而硬塞参考文献；新增引用必须对应已接受关键词链
 - 是否先给用户审阅草稿，获批后才写入
 - 正文首句是否承接上一段末句或桥接句
 - 正文末句是否为下一段制造必要性，而不是提前替下一段展开
@@ -388,5 +404,3 @@ Paragraph N：短标题
 【写入状态】：
 等待用户审阅；未获明确“写入/可以写入/同意”前，不修改目标文档。
 ```
-
-

@@ -50,6 +50,36 @@ def replace_citations(old_block, full_citation_list):
     return re.sub(r"OLD_(\d+)_OLD", new_num, old_block)
 
 
+def merge_citations(block):
+    def fmt(nums):
+        nums = sorted(set(nums))
+        chunks = []
+        start = prev = nums[0]
+        for n in nums[1:]:
+            if n == prev + 1:
+                prev = n
+                continue
+            chunks.append((start, prev))
+            start = prev = n
+        chunks.append((start, prev))
+
+        parts = []
+        for start, end in chunks:
+            if start == end:
+                parts.append(str(start))
+            elif end == start + 1:
+                parts.extend([str(start), str(end)])
+            else:
+                parts.append(f"{start}-{end}")
+        return "[" + ", ".join(parts) + "]"
+
+    return re.sub(
+        r"(?<!\[)\[\d+\](?:\s*[,，]\s*\[\d+\])+",
+        lambda m: fmt([int(x) for x in re.findall(r"\[(\d+)\]", m.group(0))]),
+        block,
+    )
+
+
 def sort_ref_blocks(blocks):
     ref_blocks = []
     other_blocks = []
@@ -81,7 +111,9 @@ def main(file_path):
 
     new_blocks = []
     for old_block in old_blocks:
-        new_blocks.append(replace_citations(old_block, full_citation_list))
+        new_block = replace_citations(old_block, full_citation_list)
+        new_block_merged = merge_citations(new_block)
+        new_blocks.append(new_block_merged)
 
     new_blocks = sort_ref_blocks(new_blocks)
     dst.write_text("\n\n".join(new_blocks) + "\n", encoding="utf-8")

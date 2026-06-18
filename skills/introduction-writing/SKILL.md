@@ -1,4 +1,4 @@
-﻿---
+---
 name: introduction-writing
 description: Build and revise academic or technical introductions and opening reports with quote-first keyword chains, confirmed core reference pools, verified original quotations, section/paragraph progression, paragraph-by-paragraph prose drafting, Chinese-corpus style calibration, and approval-gated write-in. Use when working on 开题报告, research background, introduction structure, literature evidence, keyword chains, 正文草稿, paragraph-by-paragraph reference support, or formal prose from verified quotations.
 ---
@@ -404,3 +404,8 @@ Paragraph N：短标题
 【写入状态】：
 等待用户审阅；未获明确“写入/可以写入/同意”前，不修改目标文档。
 ```
+
+
+
+
+
